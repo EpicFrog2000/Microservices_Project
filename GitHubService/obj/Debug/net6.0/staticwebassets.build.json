@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "JWWmESm8Gf2ggqLkxrO63AVOEGw9gybJ9hd6hIFQAs8=",
+  "Source": "GitHubService",
+  "BasePath": "_content/GitHubService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,52 @@
+version: "3.4"
+
+networks:
+  backend:
+    driver: bridge
+
+services:
+  database:
+    container_name: database
+    image: mysql
+    volumes:
+      - database_volume:/var/lib/mysql
+    environment:
+     - MYSQL_ROOT_PASSWORD=123456
+    ports:
+     - "3306:3306"
+    networks:
+      backend:
+        aliases:
+          - mysqlcontainer
+
+  website:
+    container_name: website
+    image: dockerlearning
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      backend:
+    ports:
+      - "5000:80"
+    depends_on:
+      - database
+
+  githubservice:
+    container_name: githubservice
+    image: githubservice
+    build:
+      context: ../GitHubService
+      dockerfile: Dockerfile
+    networks:
+      backend:
+        aliases:
+            - githubservicecontainer
+    ports:
+      - "5001:80"
+
+
+volumes:
+  database_volume:

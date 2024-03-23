@@ -1,0 +1,34 @@
+﻿<div>
+    <ul>
+        @if (ViewData["tables"] != null)
+        {
+            @foreach (var db in (List<string>)ViewData["tables"])
+            {
+                <li>@db</li>
+            }
+        }else{
+            <li>@ViewData["Error"]</li>
+        }
+    </ul>
+</div>
+
+<div class="project-container">
+    <div class="project-top"></div>
+    <div class="project-bottom"></div>
+</div>
+<div class="project-container">
+    <div class="project-top"></div>
+    <div class="project-bottom"></div>
+</div>
+<div class="project-container">
+    <div class="project-top"></div>
+    <div class="project-bottom"></div>
+</div>
+<div class="project-container">
+    <div class="project-top"></div>
+    <div class="project-bottom"></div>
+</div>
+<div class="project-container">
+    <div class="project-top"></div>
+    <div class="project-bottom"></div>
+</div>

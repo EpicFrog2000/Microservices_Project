@@ -1,0 +1,145 @@
+body {
+    margin: auto;
+    background: #181818;
+    color: white;
+    font: 500 20px/1.5 "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.9rem;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #2c2c2c;
+}
+
+.content {
+    margin-top: 20px;
+    width: 60%;
+    max-width: 800px;
+    height: 100%;
+}
+
+.navigation, .nav-list {
+    max-height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+}
+
+.nav-li {
+    margin: 0 8px;
+    padding: 0 10px;
+    border: 1px solid #2c2c2c;
+    border-radius: 10px;
+    align-items: center;
+    height: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    min-height: 42px;
+}
+
+.nav-li:hover {
+    background-color: #1f1f1f;
+    cursor: pointer;
+    border: 1px solid #666;
+}
+
+.nav-li:hover .nav-text, .nav-li.active .nav-text {
+    color: white;
+}
+
+.nav-item {
+    color: #bbb;
+    display: flex;
+    align-items: center;
+}
+
+.nav-li.active {
+    background-color: #1f1f1f;
+    border-color: #666;
+    color: white;
+}
+
+i {
+    margin-right: 10px;
+}
+
+.nav-item a, .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-link:hover .nav-text {
+    color: white;
+}
+
+.nav-item .nav-text {
+    margin-left: 5px;
+    color: inherit;
+}
+
+.project-container {
+    border: 1px solid #d1d5da;
+    border-radius: 6px;
+    background-color: #1f1f1f;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 700px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    flex-direction: column;
+}
+
+.project-top {
+    height: 40%;
+    width: 100%;
+    background-color: #1f1f1f;
+    border: 1px solid #d1d5da;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.project-bottom {
+    height: 60%;
+    width: 100%;
+    background-color: #181818;
+    border: 1px solid #d1d5da;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}

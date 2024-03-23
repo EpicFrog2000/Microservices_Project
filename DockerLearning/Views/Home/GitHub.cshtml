@@ -1,0 +1,30 @@
+﻿@using Newtonsoft.Json
+@{
+    var githubData = ViewData["githubdata"] as string;
+    List<Dictionary<string, object>> githubList = null;
+    if (!string.IsNullOrEmpty(githubData))
+    {
+        githubList = JsonConvert.DeserializeObject<List<Dictionary<string, object>>>(githubData);
+    }
+}
+
+<div>
+    @if (githubList == null)
+    {
+        <p>ERROR</p>
+    }
+    else
+    {
+        <ul>
+            @foreach (var item in githubList)
+            {
+                foreach (var key in item.Keys)
+                {
+                    <li>@key: @item[key]</li>
+                    
+                }
+                <br></br>
+            }
+        </ul>
+    }
+</div>
