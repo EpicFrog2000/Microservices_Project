@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4jQvCjstvs1Y0UsiFbnjGOlQOY7A0Qlrk/pZUrQja71MeyOGmS98ZTGdXmkQpUEMXMZGsoTxmHz5/kkVnVabNw==",
+  "dgSpecHash": "W0gYPeZ+Nb95FpyY1hdnBov1VdEQlFQo78erhJNwL2DFX62aGe1RTWEm73u60h3HLMf2N2X6eA6PKKSXlgLpvA==",
   "success": true,
-  "projectFilePath": "D:\\chash\\AspNetCoreApp\\GitHubService\\GitHubService.csproj",
+  "projectFilePath": "D:\\chash\\AspNetCoreApp\\Microservices_Project\\GitHubService\\GitHubService.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

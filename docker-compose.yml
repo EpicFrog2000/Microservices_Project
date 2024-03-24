@@ -11,9 +11,9 @@ services:
     volumes:
       - database_volume:/var/lib/mysql
     environment:
-     - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_ROOT_PASSWORD=123456
     ports:
-     - "3306:3306"
+      - "3306:3306"
     networks:
       backend:
         aliases:
@@ -23,7 +23,7 @@ services:
     container_name: website
     image: dockerlearning
     build:
-      context: .
+      context: ./DockerLearning
       dockerfile: Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
@@ -33,20 +33,17 @@ services:
       - "5000:80"
     depends_on:
       - database
-
   githubservice:
     container_name: githubservice
     image: githubservice
     build:
-      context: ../GitHubService
+      context: ./GitHubService
       dockerfile: Dockerfile
     networks:
       backend:
         aliases:
-            - githubservicecontainer
+          - githubservicecontainer
     ports:
       - "5001:80"
-
-
 volumes:
   database_volume:

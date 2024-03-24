@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\chash\\AspNetCoreApp\\GitHubService\\GitHubService.csproj",
+      "projectUniqueName": "D:\\chash\\AspNetCoreApp\\Microservices_Project\\GitHubService\\GitHubService.csproj",
       "projectName": "GitHubService",
-      "projectPath": "D:\\chash\\AspNetCoreApp\\GitHubService\\GitHubService.csproj",
+      "projectPath": "D:\\chash\\AspNetCoreApp\\Microservices_Project\\GitHubService\\GitHubService.csproj",
       "packagesPath": "C:\\Users\\norbert\\.nuget\\packages\\",
-      "outputPath": "D:\\chash\\AspNetCoreApp\\GitHubService\\obj\\",
+      "outputPath": "D:\\chash\\AspNetCoreApp\\Microservices_Project\\GitHubService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\norbert\\AppData\\Roaming\\NuGet\\NuGet.Config",

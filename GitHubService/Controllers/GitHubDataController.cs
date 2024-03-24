@@ -1,4 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
+using System.IO;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace GitHubService.Controllers
 {
@@ -7,39 +12,62 @@ namespace GitHubService.Controllers
     public class GitHubDataController : ControllerBase
     {
         private readonly ILogger<GitHubDataController> _logger;
-        public GitHubDataController(ILogger<GitHubDataController> logger)
+        private readonly string _filePath;
+
+        public GitHubDataController(ILogger<GitHubDataController> logger, string filePath = "GitHubData.json")
         {
             _logger = logger;
+            _filePath = Path.Combine(Directory.GetCurrentDirectory(), filePath);
         }
 
         [HttpGet]
-        public async Task<string> Get()
+        public ActionResult<string> Get()
         {
-            string apiUrl = $"https://api.github.com/users/EpicFrog2000/repos";
+            try
+            {
+                if (!System.IO.File.Exists(_filePath))
+                {
+                    Console.WriteLine($"GitHubData file not found at path: {_filePath}");
+                    return NotFound();
+                }
 
+                string fileContent = System.IO.File.ReadAllText(_filePath);
+                return fileContent;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while reading GitHubData file: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        [HttpGet("update")]
+        public async Task<ActionResult> UpdateJSONAsync()
+        {
             using (HttpClient client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("User-Agent", "Awesome-Octocat-App");
-
                 try
                 {
-                    HttpResponseMessage response = await client.GetAsync(apiUrl);
+                    HttpResponseMessage response = await client.GetAsync("https://api.github.com/users/EpicFrog2000/repos");
 
                     if (response.IsSuccessStatusCode)
                     {
-                        string responseData = await response.Content.ReadAsStringAsync();
-                        return responseData;
+                        string jsonData = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                        await System.IO.File.WriteAllTextAsync(_filePath, jsonData).ConfigureAwait(false);
+                        Console.WriteLine($"Success! Data saved to {_filePath}");
+                        return Ok();
                     }
                     else
                     {
                         Console.WriteLine($"Failed to retrieve user repositories. Status code: {response.StatusCode}");
-                        return null;
+                        return BadRequest();
                     }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine($"An error occurred: {ex.Message}");
-                    return null;
+                    return BadRequest();
                 }
             }
         }

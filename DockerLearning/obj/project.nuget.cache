@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jrAu3eQ7kc1gJ2bl5JFa866cqF1nV3cy+I2w2g5S4tIEHo9nGhLXXKJ5zdjWRgm0T4zvOmBMRUh2njFkn0F0Iw==",
+  "dgSpecHash": "gG0IubLlPXCWPg5ztYJmhjdDIOxqSPYiI1JXgE8HZ3NEDZDhEEMbqXXMvH4flQJ3vA8DIdj7NpjeTdKV2zKMyw==",
   "success": true,
-  "projectFilePath": "D:\\chash\\AspNetCoreApp\\DockerLearning\\DockerLearning.csproj",
+  "projectFilePath": "D:\\chash\\AspNetCoreApp\\Microservices_Project\\DockerLearning\\DockerLearning.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\norbert\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\norbert\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",

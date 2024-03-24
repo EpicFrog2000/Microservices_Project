@@ -1738,11 +1738,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\chash\\AspNetCoreApp\\DockerLearning\\DockerLearning.csproj",
+      "projectUniqueName": "D:\\chash\\AspNetCoreApp\\Microservices_Project\\DockerLearning\\DockerLearning.csproj",
       "projectName": "DockerLearning",
-      "projectPath": "D:\\chash\\AspNetCoreApp\\DockerLearning\\DockerLearning.csproj",
+      "projectPath": "D:\\chash\\AspNetCoreApp\\Microservices_Project\\DockerLearning\\DockerLearning.csproj",
       "packagesPath": "C:\\Users\\norbert\\.nuget\\packages\\",
-      "outputPath": "D:\\chash\\AspNetCoreApp\\DockerLearning\\obj\\",
+      "outputPath": "D:\\chash\\AspNetCoreApp\\Microservices_Project\\DockerLearning\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\norbert\\AppData\\Roaming\\NuGet\\NuGet.Config",
