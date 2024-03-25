@@ -10,53 +10,51 @@
 </head>
 <body>
     <div class="content">
-        <div class="navigation">
-            <ul class="nav-list">
-                @{
-                    var navItems = new List<string>
-                {
-                "Home",
-                "About",
-                "Projects",
-                "GitHub",
-                "Youtube"
-                };
-                }
-                @foreach (var item in navItems)
-                {
-                    <li class="nav-li @(ViewBag.CurrentPage == item ? "active" : "")">
-                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="@item">
-                            <div class="nav-item">
-                                @{
-                                    string iconClass = "";
-                                    switch (item)
-                                    {
-                                        case "Home":
-                                            iconClass = "fa fa-home";
-                                            break;
-                                        case "About":
-                                            iconClass = "fa fa-info-circle";
-                                            break;
-                                        case "Projects":
-                                            iconClass = "fa fas fa-code";
-                                            break;
-                                        case "GitHub":
-                                            iconClass = "fa fa-github";
-                                            break;
-                                        case "Youtube":
-                                            iconClass = "fa fa-youtube-play";
-                                            break;
-                                        default:
-                                            break;
-                                    }
+        <div class="nav-list">
+            @{
+                var navItems = new List<string>
+            {
+            "Home",
+            "About",
+            "Projects",
+            "GitHub",
+            "Youtube"
+            };
+            }
+            @foreach (var item in navItems)
+            {
+                <div class="nav-li @(ViewBag.CurrentPage == item ? "active" : "")">
+                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="@item">
+                        <div class="nav-item">
+                            @{
+                                string iconClass = "";
+                                switch (item)
+                                {
+                                    case "Home":
+                                        iconClass = "fa fa-home";
+                                        break;
+                                    case "About":
+                                        iconClass = "fa fa-info-circle";
+                                        break;
+                                    case "Projects":
+                                        iconClass = "fa fa-rocket";
+                                        break;
+                                    case "GitHub":
+                                        iconClass = "fa fa-github";
+                                        break;
+                                    case "Youtube":
+                                        iconClass = "fa fa-youtube-play";
+                                        break;
+                                    default:
+                                        break;
                                 }
-                                <i class="@iconClass" style="font-size:24px"></i>
-                                <span class="nav-text">@item</span>
-                            </div>
-                        </a>
-                    </li>
-                }
-            </ul>
+                            }
+                            <i class="@iconClass" style="font-size:24px"></i>
+                            <span class="nav-text">@item</span>
+                        </div>
+                    </a>
+                </div>
+            }
         </div>
         @RenderBody()
     </div>

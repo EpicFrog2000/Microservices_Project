@@ -15,16 +15,34 @@
     }
     else
     {
-        <ul>
-            @foreach (var item in githubList)
-            {
-                foreach (var key in item.Keys)
-                {
-                    <li>@key: @item[key]</li>
-                    
-                }
-                <br></br>
-            }
-        </ul>
+        @foreach (var item in githubList)
+        {
+
+            <div class="project-container">
+                <div class="project-top">
+                    <div class="project-title">
+                        @item["full_name"]
+                    </div>
+                    <div class="project-stars">
+                        <div class="stars-circle">@item["stargazers_count"]</div>
+                        <i class="fa fas fa-star-o" style="font-size: 24px; color: gold; margin:0px; padding: 0px;"></i>
+                        <div style="font-size: 18px;color: white;">stars</div>
+                    </div>
+                </div>
+
+                <div class="project-bottom">
+                    <div class="project-desc">
+                        <div class="description">
+                            @item["description"]
+                        </div>
+                        <div>topics</div>
+                    </div>
+                    <div class="project-update-date">
+                        <div class="update-date">Last Updated at @item["pushed_at"]</div>
+                        <div class="project-lang">@item["language"]</div>
+                    </div>
+                </div>
+            </div>
+        }
     }
 </div>

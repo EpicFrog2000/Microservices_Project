@@ -2,12 +2,16 @@ body {
     margin: auto;
     background: #181818;
     color: white;
-    font: 500 20px/1.5 "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font: 200 20px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.9rem;
     overflow-y: scroll;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
 
 body::-webkit-scrollbar {
@@ -26,22 +30,26 @@ body::-webkit-scrollbar-track {
 .content {
     margin-top: 20px;
     width: 60%;
-    max-width: 800px;
+    width: 800px;
     height: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.navigation, .nav-list {
+.nav-list {
     max-height: 100px;
-    width: 100%;
+    width: 800px;
+    padding: 0px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
     justify-content: center;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    padding: 0px;
+    flex-direction: row;
 }
+
 
 .nav-list {
     list-style: none;
@@ -90,6 +98,18 @@ i {
     margin-right: 10px;
 }
 
+.fa.fa-youtube-play {
+    color: #FF0000;
+}
+
+.fa.fa-info-circle {
+    color: #1DA1F2;
+}
+
+.fa.fa-rocket {
+    color: white;
+}
+
 .nav-item a, .nav-link {
     display: flex;
     align-items: center;
@@ -108,38 +128,101 @@ i {
     margin-left: 5px;
     color: inherit;
 }
-
 .project-container {
-    border: 1px solid #d1d5da;
-    border-radius: 6px;
-    background-color: #1f1f1f;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    width: 700px;
-    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    width: 600px;
+    height: 250px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0px;
-    flex-direction: column;
 }
 
 .project-top {
     height: 40%;
     width: 100%;
     background-color: #1f1f1f;
-    border: 1px solid #d1d5da;
+    border: 1px solid #555;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .project-bottom {
     height: 60%;
     width: 100%;
     background-color: #181818;
-    border: 1px solid #d1d5da;
+    border: 1px solid #555;
+    border-top: none;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project-title {
+    width: 60%;
+    color: #4493f8;
+}
+
+.project-stars {
+    width: 30%;
+    color: #ddd;
+    width: 130px;
+    height: 40px;
+    background-color: #181818;
+    border: 1px solid #555;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.stars-circle {
+    padding: 5px;
+    font-size: 12px;
+    background-color: #555;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-desc {
+    height: 80%;
+    width: 100%;
+    border-bottom: 1px solid #555;
+}
+
+.project-update-date {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.project-lang, .update-date {
+    color: #bbb;
+    font-size: 15px;
+    margin: 0 20px;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
 }
