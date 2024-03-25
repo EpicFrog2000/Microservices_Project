@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockerLearning", "DockerLearning.csproj", "{D3B0686B-B67F-4F7A-A895-A1B368BF17E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubService", "..\GitHubService\GitHubService.csproj", "{8BDC0B3A-E3A8-4C45-AAAE-EC5BD9584B36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubService", "..\GitHubService\GitHubService.csproj", "{8BDC0B3A-E3A8-4C45-AAAE-EC5BD9584B36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtAuthService", "..\JwtAuthService\JwtAuthService.csproj", "{4525B79D-2657-4364-9921-8A206E195BDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8BDC0B3A-E3A8-4C45-AAAE-EC5BD9584B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BDC0B3A-E3A8-4C45-AAAE-EC5BD9584B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BDC0B3A-E3A8-4C45-AAAE-EC5BD9584B36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4525B79D-2657-4364-9921-8A206E195BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4525B79D-2657-4364-9921-8A206E195BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4525B79D-2657-4364-9921-8A206E195BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4525B79D-2657-4364-9921-8A206E195BDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

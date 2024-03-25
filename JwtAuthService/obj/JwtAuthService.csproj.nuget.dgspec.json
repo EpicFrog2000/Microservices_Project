@@ -1,0 +1,84 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\chash\\AspNetCoreApp\\Microservices_Project\\JwtAuthService\\JwtAuthService.csproj": {}
+  },
+  "projects": {
+    "D:\\chash\\AspNetCoreApp\\Microservices_Project\\JwtAuthService\\JwtAuthService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\chash\\AspNetCoreApp\\Microservices_Project\\JwtAuthService\\JwtAuthService.csproj",
+        "projectName": "JwtAuthService",
+        "projectPath": "D:\\chash\\AspNetCoreApp\\Microservices_Project\\JwtAuthService\\JwtAuthService.csproj",
+        "packagesPath": "C:\\Users\\norbert\\.nuget\\packages\\",
+        "outputPath": "D:\\chash\\AspNetCoreApp\\Microservices_Project\\JwtAuthService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\norbert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[110.2.1-alpha.0.16, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.4.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

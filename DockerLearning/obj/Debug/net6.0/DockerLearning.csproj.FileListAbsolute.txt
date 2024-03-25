@@ -114,3 +114,11 @@ D:\chash\AspNetCoreApp\Microservices_Project\DockerLearning\obj\Debug\net6.0\ref
 D:\chash\AspNetCoreApp\Microservices_Project\DockerLearning\obj\Debug\net6.0\DockerLearning.pdb
 D:\chash\AspNetCoreApp\Microservices_Project\DockerLearning\obj\Debug\net6.0\DockerLearning.genruntimeconfig.cache
 D:\chash\AspNetCoreApp\Microservices_Project\DockerLearning\obj\Debug\net6.0\ref\DockerLearning.dll
+D:\chash\AspNetCoreApp\Microservices_Project\DockerLearning\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\chash\AspNetCoreApp\Microservices_Project\DockerLearning\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\chash\AspNetCoreApp\Microservices_Project\DockerLearning\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\chash\AspNetCoreApp\Microservices_Project\DockerLearning\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\chash\AspNetCoreApp\Microservices_Project\DockerLearning\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\chash\AspNetCoreApp\Microservices_Project\DockerLearning\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\chash\AspNetCoreApp\Microservices_Project\DockerLearning\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\chash\AspNetCoreApp\Microservices_Project\DockerLearning\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll

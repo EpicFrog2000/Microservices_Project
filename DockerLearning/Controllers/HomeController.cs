@@ -17,7 +17,7 @@ namespace DockerLearning.Controllers
         {
             _logger = logger;
         }
-
+        [HttpGet("Home")]
         public IActionResult Home()
         {
             List<string> tables = new List<string>();
@@ -50,33 +50,39 @@ namespace DockerLearning.Controllers
             ViewBag.CurrentPage = "Home";
             return View();
         }
+        [HttpGet("About")]
         public IActionResult About()
         {
             ViewBag.CurrentPage = "About";
             return View();
         }
+        [HttpGet("Projects")]
         public IActionResult Projects()
         {
             ViewBag.CurrentPage = "Projects";
             return View();
         }
+        [HttpGet("GitHub")]
         public async Task<IActionResult> GitHub()
         {
             ViewData["githubdata"] = await GithubDataRetriever.GetData();
             ViewBag.CurrentPage = "GitHub";
             return View();
         }
+        [HttpGet("Youtube")]
         public IActionResult Youtube()
         {
             ViewBag.CurrentPage = "Youtube";
             return View();
         }
+        [HttpGet("Privacy")]
         public IActionResult Privacy()
         {
             return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        [HttpGet("Error")]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

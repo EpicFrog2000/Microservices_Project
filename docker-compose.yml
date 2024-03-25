@@ -33,6 +33,7 @@ services:
       - "5000:80"
     depends_on:
       - database
+
   githubservice:
     container_name: githubservice
     image: githubservice
@@ -45,6 +46,20 @@ services:
           - githubservicecontainer
     ports:
       - "5001:80"
+
+  jwtauthservice:
+    container_name: jwtauthservice
+    image: jwtauthservice
+    build:
+      context: ./JwtAuthService
+      dockerfile: Dockerfile
+    networks:
+      backend:
+        aliases:
+          - jwtauthservicecontainer
+    ports:
+      - "5002:80"
+
 volumes:
   database_volume:
 
