@@ -1,6 +1,4 @@
-﻿
-using Microsoft.AspNetCore.Mvc;
-
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace DockerLearning.Controllers
 {
