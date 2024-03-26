@@ -40,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxZb3V0dWJlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/chash/AspNetCoreApp/Microservices_Project/DockerLearning/Views/Login/AdminPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQWRtaW5QYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/chash/AspNetCoreApp/Microservices_Project/DockerLearning/Views/Login/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

@@ -15,28 +15,29 @@
 <script>
     document.getElementById('loginForm').addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent the default form submission
-
         // Serialize form data
         var formData = new FormData(this);
-
         // Send the form data via fetch
         fetch(this.action, {
             method: 'POST',
-            body: formData
-        })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Success:', data);
-                // Handle success response as needed (e.g., redirect user)
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                // Handle error response as needed (e.g., display error message)
-            });
+            body: formData,
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            }
+        }).then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        }).then(data => {
+            console.log('Success:', data);
+            // Store the token securely (e.g., in a cookie or local storage)
+            document.cookie = `token=${data.token}; path=/;`;
+            // Redirect user to the secured page
+            window.location.href = "/AdminPage"; // Adjust the URL as per your routing configuration
+        }).catch(error => {
+            console.error('Error:', error);
+            // Handle error response as needed (e.g., display error message)
+        });
     });
 </script>

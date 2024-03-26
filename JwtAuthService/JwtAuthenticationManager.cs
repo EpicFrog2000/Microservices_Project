@@ -2,10 +2,6 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using System;
-using System.Web;
-using RestSharp;
-using Microsoft.AspNetCore.Http;
 
 
 namespace JwtAuth
@@ -43,16 +39,16 @@ namespace JwtAuth
             var securityToken = jwtSecurityTokenHandler.CreateToken(securityTokenDescriptor);
             var token = jwtSecurityTokenHandler.WriteToken(securityToken);
 
-            // Get the HttpContext
-            var httpContext = _httpContextAccessor.HttpContext;
-            // Set the cookie
-            httpContext.Response.Cookies.Append("jwt_token", token, new CookieOptions
-            {
-                HttpOnly = true,
-                Secure = true,
-                SameSite = SameSiteMode.Strict,
-                Expires = DateTime.Now.AddDays(1)
-            });
+            //// Get the HttpContext
+            //var httpContext = _httpContextAccessor.HttpContext;
+            //// Set the cookie
+            //httpContext.Response.Cookies.Append("jwt_token", token, new CookieOptions
+            //{
+            //    HttpOnly = true,
+            //    Secure = true,
+            //    SameSite = SameSiteMode.Strict,
+            //    Expires = DateTime.Now.AddDays(1)
+            //});
 
             return new JwtAuthResponse
             {
