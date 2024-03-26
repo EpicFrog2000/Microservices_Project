@@ -1,0 +1,42 @@
+﻿<h1>Login</h1>
+
+<form id="loginForm" method="post" action="http://localhost:5002/api/Account/Login">
+    <div>
+        <label for="userName">Username:</label>
+        <input type="text" id="userName" name="userName" required />
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+    </div>
+    <button type="submit">Login</button>
+</form>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Serialize form data
+        var formData = new FormData(this);
+
+        // Send the form data via fetch
+        fetch(this.action, {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Success:', data);
+                // Handle success response as needed (e.g., redirect user)
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Handle error response as needed (e.g., display error message)
+            });
+    });
+</script>

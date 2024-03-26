@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["JwtAuth.csproj", "."]
-RUN dotnet restore "./JwtAuth.csproj"
+COPY ["JwtAuthService.csproj", "."]
+RUN dotnet restore "./JwtAuthService.csproj"
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "JwtAuth.csproj" -c Release -o /app/build
+RUN dotnet build "JwtAuthService.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "JwtAuth.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "JwtAuthService.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "JwtAuth.dll"]
+ENTRYPOINT ["dotnet", "JwtAuthService.dll"]

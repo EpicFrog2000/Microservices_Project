@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "w62oOPVhRzSjm4lhhEb6QBZk1Xdt5KGC0f0JfvbSXyp22Ct0gZYdaNLKdo9kvSAoJcUFWnUto+28mVqDpu6RCw==",
+  "dgSpecHash": "Uacb5Ze+U8BiEtBY7uPmXArinLJwduLEHbvtGRffV0sw9O/Kq0xGbvnrJOwyFkCL1TKosDP+KNeqBCjA1J9HNg==",
   "success": true,
   "projectFilePath": "D:\\chash\\AspNetCoreApp\\Microservices_Project\\JwtAuthService\\JwtAuthService.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\norbert\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.1.1\\microsoft.aspnetcore.authentication.abstractions.2.1.1.nupkg.sha512",
     "C:\\Users\\norbert\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.1.1\\microsoft.aspnetcore.authentication.core.2.1.1.nupkg.sha512",
     "C:\\Users\\norbert\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.1\\microsoft.aspnetcore.authentication.jwtbearer.6.0.1.nupkg.sha512",
+    "C:\\Users\\norbert\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.1.1\\microsoft.aspnetcore.cors.2.1.1.nupkg.sha512",
     "C:\\Users\\norbert\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.1.1\\microsoft.aspnetcore.cryptography.internal.2.1.1.nupkg.sha512",
     "C:\\Users\\norbert\\.nuget\\packages\\microsoft.aspnetcore.dataprotection\\2.1.1\\microsoft.aspnetcore.dataprotection.2.1.1.nupkg.sha512",
     "C:\\Users\\norbert\\.nuget\\packages\\microsoft.aspnetcore.dataprotection.abstractions\\2.1.1\\microsoft.aspnetcore.dataprotection.abstractions.2.1.1.nupkg.sha512",

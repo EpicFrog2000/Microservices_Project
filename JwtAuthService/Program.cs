@@ -29,13 +29,24 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-var app = builder.Build();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalhost5000",
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:5000")
+                   .AllowAnyHeader()
+                   .AllowAnyMethod();
+        });
+});
 
-// Configure the HTTP request pipeline.
+var app = builder.Build();
 
 app.UseAuthentication();
 app.UseAuthorization();
 
+// Add CORS middleware
+app.UseCors("AllowLocalhost5000");
 
 app.MapControllers();
 
